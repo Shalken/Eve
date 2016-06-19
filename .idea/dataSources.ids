@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - eve@127.0.0.1" uuid="c8c6e43a-7ebc-4a20-9ceb-45ad12c181bc">
+    <database-info product="MySQL" version="5.7.13-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="eve"/>
+      <table id="2" parent="1" name="apiaccountbalance"/>
+      <table id="3" parent="1" name="apiassets"/>
+      <table id="4" parent="1" name="apiblueprints"/>
+      <table id="5" parent="1" name="apiconquerablestationslist"/>
+      <table id="6" parent="1" name="apicontactlist"/>
+      <table id="7" parent="1" name="apicontainerlog"/>
+      <table id="8" parent="1" name="apicontractitems"/>
+      <table id="9" parent="1" name="apicontracts"/>
+      <table id="10" parent="1" name="apicorpmembers"/>
+      <table id="11" parent="1" name="apicorps"/>
+      <table id="12" parent="1" name="apicorpsheet"/>
+      <table id="13" parent="1" name="apidivisions"/>
+      <table id="14" parent="1" name="apierrorlist"/>
+      <table id="15" parent="1" name="apifacilities"/>
+      <table id="16" parent="1" name="apifacwarstats"/>
+      <table id="17" parent="1" name="apiindustryjobs"/>
+      <table id="18" parent="1" name="apiindustryjobscrius"/>
+      <column id="19" parent="2" name="accountID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="20" parent="2" name="accountKey">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="21" parent="2" name="balance">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="22" parent="2" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <key id="23" parent="2" name="PRIMARY">
+        <columns>accountID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="24" parent="3" name="itemID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="25" parent="3" name="parentItemID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="26" parent="3" name="locationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="27" parent="3" name="typeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="28" parent="3" name="quantity">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="29" parent="3" name="flag">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="30" parent="3" name="singleton">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="31" parent="3" name="rawQuantity">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="32" parent="3" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <key id="33" parent="3" name="PRIMARY">
+        <columns>itemID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="34" parent="4" name="itemID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="35" parent="4" name="locationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="36" parent="4" name="typeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="37" parent="4" name="typeName">
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="38" parent="4" name="flagID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="39" parent="4" name="quantity">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="40" parent="4" name="timeEfficiency">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="41" parent="4" name="materialEfficiency">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="42" parent="4" name="runs">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="43" parent="4" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="44" parent="4" name="PRIMARY">
+        <columns>itemID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="45" parent="5" name="stationID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="46" parent="5" name="stationName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="47" parent="5" name="stationTypeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="48" parent="5" name="solarSystemID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="49" parent="5" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="50" parent="5" name="corporationName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <key id="51" parent="5" name="PRIMARY">
+        <columns>stationID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="52" parent="6" name="contactID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="53" parent="6" name="contactName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="54" parent="6" name="standing">
+        <mandatory>1</mandatory>
+        <data-type>decimal(5,2)</data-type>
+      </column>
+      <column id="55" parent="6" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <key id="56" parent="6" name="PRIMARY">
+        <columns>contactID
+corporationID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="57" parent="7" name="logTime">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="58" parent="7" name="itemID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="59" parent="7" name="itemTypeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="60" parent="7" name="actorID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="61" parent="7" name="actorName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)</data-type>
+      </column>
+      <column id="62" parent="7" name="flag">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="63" parent="7" name="locationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="64" parent="7" name="action">
+        <mandatory>1</mandatory>
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="65" parent="7" name="passwordType">
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="66" parent="7" name="typeID">
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="67" parent="7" name="quantity">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="68" parent="7" name="oldConfiguration">
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="69" parent="7" name="newConfiguration">
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="70" parent="7" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="71" parent="8" name="contractID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="72" parent="8" name="recordID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="73" parent="8" name="typeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="74" parent="8" name="quantity">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="75" parent="8" name="singleton">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="8" name="included">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="77" parent="8" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <index id="78" parent="8" name="contractID">
+        <columns>contractID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="79" parent="8" name="corporationID">
+        <columns>corporationID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="80" parent="8" name="typeID">
+        <columns>typeID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="81" parent="8" name="PRIMARY">
+        <columns>recordID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="82" parent="9" name="contractID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="83" parent="9" name="issuerID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="84" parent="9" name="issuerCorpID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="85" parent="9" name="assigneeID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="86" parent="9" name="acceptorID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="87" parent="9" name="startStationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="88" parent="9" name="endStationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="89" parent="9" name="type">
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="90" parent="9" name="status">
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="91" parent="9" name="title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="92" parent="9" name="forCorp">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="93" parent="9" name="availability">
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="94" parent="9" name="dateIssued">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="95" parent="9" name="dateExpired">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="96" parent="9" name="dateAccepted">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="97" parent="9" name="numDays">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="98" parent="9" name="dateCompleted">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="99" parent="9" name="price">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="100" parent="9" name="reward">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="101" parent="9" name="collateral">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="102" parent="9" name="buyout">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="103" parent="9" name="volume">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="104" parent="9" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <index id="105" parent="9" name="acceptorID">
+        <columns>acceptorID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="106" parent="9" name="assigneeID">
+        <columns>assigneeID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="107" parent="9" name="corporationID">
+        <columns>corporationID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="108" parent="9" name="issuerCorpID">
+        <columns>issuerCorpID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="109" parent="9" name="issuerID">
+        <columns>issuerID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="110" parent="9" name="PRIMARY">
+        <columns>contractID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="111" parent="10" name="characterID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="112" parent="10" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="113" parent="10" name="startDateTime">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="114" parent="10" name="baseID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="115" parent="10" name="base">
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="116" parent="10" name="title">
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="117" parent="10" name="corporationID">
+        <data-type>bigint(11)</data-type>
+      </column>
+      <index id="118" parent="10" name="corporationID">
+        <columns>corporationID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="119" parent="10" name="PRIMARY">
+        <columns>characterID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="120" parent="11" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="121" parent="11" name="corporationName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="122" parent="11" name="characterID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="123" parent="11" name="characterName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="124" parent="11" name="keyID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="125" parent="11" name="PRIMARY">
+        <columns>corporationID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="126" parent="12" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="127" parent="12" name="corporationName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="128" parent="12" name="ticker">
+        <mandatory>1</mandatory>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="129" parent="12" name="ceoID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="130" parent="12" name="ceoName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="131" parent="12" name="stationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="132" parent="12" name="stationName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <column id="133" parent="12" name="description">
+        <mandatory>1</mandatory>
+        <data-type>varchar(2048)</data-type>
+      </column>
+      <column id="134" parent="12" name="url">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="135" parent="12" name="allianceID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="136" parent="12" name="taxRate">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="137" parent="12" name="memberCount">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="138" parent="12" name="memberLimit">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="139" parent="12" name="shares">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="140" parent="12" name="graphicId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="12" name="shape1">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="142" parent="12" name="shape2">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="143" parent="12" name="shape3">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="144" parent="12" name="color1">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="145" parent="12" name="color2">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="146" parent="12" name="color3">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="147" parent="12" name="PRIMARY">
+        <columns>corporationID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="148" parent="13" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="149" parent="13" name="accountKey">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="150" parent="13" name="description">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="151" parent="13" name="corporationId">
+        <columns>corporationID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <column id="152" parent="14" name="errorCode">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="153" parent="14" name="errorText">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1024)</data-type>
+      </column>
+      <key id="154" parent="14" name="PRIMARY">
+        <columns>errorCode</columns>
+        <primary>1</primary>
+      </key>
+      <column id="155" parent="15" name="facilityID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="156" parent="15" name="typeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="157" parent="15" name="typeName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="158" parent="15" name="solarSystemID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="159" parent="15" name="solarSystemName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="160" parent="15" name="regionID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="161" parent="15" name="regionName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="162" parent="15" name="starbaseModifier">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="163" parent="15" name="tax">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="164" parent="15" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="165" parent="15" name="PRIMARY">
+        <columns>facilityID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="166" parent="16" name="factionID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="167" parent="16" name="factionName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(64)</data-type>
+      </column>
+      <column id="168" parent="16" name="enlisted">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="169" parent="16" name="pilots">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="170" parent="16" name="killsYesterday">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="171" parent="16" name="killsLastWeek">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="172" parent="16" name="killsTotal">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="173" parent="16" name="victoryPointsYesterday">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="174" parent="16" name="victoryPointsLastWeek">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="175" parent="16" name="victoryPointsTotal">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="176" parent="16" name="corporationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <key id="177" parent="16" name="PRIMARY">
+        <columns>corporationID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="178" parent="17" name="jobID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="179" parent="17" name="assemblyLineID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="180" parent="17" name="containerID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="181" parent="17" name="installedItemID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="182" parent="17" name="installedItemLocationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="183" parent="17" name="installedItemQuantity">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="184" parent="17" name="installedItemProductivityLevel">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="185" parent="17" name="installedItemMaterialLevel">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="186" parent="17" name="installedItemLicensedProductionRunsRemaining">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="187" parent="17" name="outputLocationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="188" parent="17" name="installerID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="189" parent="17" name="runs">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="190" parent="17" name="licensedProductionRuns">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="191" parent="17" name="installedInSolarSystemID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="192" parent="17" name="containerLocationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="193" parent="17" name="materialMultiplier">
+        <mandatory>1</mandatory>
+        <data-type>decimal(16,15)</data-type>
+      </column>
+      <column id="194" parent="17" name="charMaterialMultiplier">
+        <mandatory>1</mandatory>
+        <data-type>decimal(16,15)</data-type>
+      </column>
+      <column id="195" parent="17" name="timeMultiplier">
+        <mandatory>1</mandatory>
+        <data-type>decimal(16,15)</data-type>
+      </column>
+      <column id="196" parent="17" name="charTimeMultiplier">
+        <mandatory>1</mandatory>
+        <data-type>decimal(16,15)</data-type>
+      </column>
+      <column id="197" parent="17" name="installedItemTypeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="198" parent="17" name="outputTypeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="199" parent="17" name="containerTypeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="200" parent="17" name="installedItemCopy">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="201" parent="17" name="completed">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="202" parent="17" name="completedSuccessfully">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="203" parent="17" name="successfulRuns">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="204" parent="17" name="installedItemFlag">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="205" parent="17" name="outputFlag">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="206" parent="17" name="activityID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="207" parent="17" name="completedStatus">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="208" parent="17" name="installTime">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="209" parent="17" name="beginProductionTime">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="210" parent="17" name="endProductionTime">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="211" parent="17" name="pauseProductionTime">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="212" parent="17" name="corporationID">
+        <data-type>bigint(11)</data-type>
+      </column>
+      <index id="213" parent="17" name="beginProductionTime">
+        <columns>beginProductionTime</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="214" parent="17" name="endProductionTime">
+        <columns>endProductionTime</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="215" parent="17" name="installedItemID">
+        <columns>installedItemID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="216" parent="17" name="installedItemTypeID">
+        <columns>installedItemTypeID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="217" parent="17" name="installerID">
+        <columns>installerID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="218" parent="17" name="installTime">
+        <columns>installTime</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="219" parent="17" name="outputTypeID">
+        <columns>outputTypeID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="220" parent="17" name="PRIMARY">
+        <columns>jobID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="221" parent="18" name="jobID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="222" parent="18" name="installerID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="223" parent="18" name="installerName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="224" parent="18" name="facilityID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="225" parent="18" name="solarSystemID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="226" parent="18" name="solarSystemName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="227" parent="18" name="stationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="228" parent="18" name="activityID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="229" parent="18" name="blueprintID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="230" parent="18" name="blueprintTypeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="231" parent="18" name="blueprintTypeName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="232" parent="18" name="blueprintLocationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="233" parent="18" name="outputLocationID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="234" parent="18" name="runs">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="235" parent="18" name="cost">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="236" parent="18" name="teamID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="237" parent="18" name="licensedRuns">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="238" parent="18" name="probability">
+        <mandatory>1</mandatory>
+        <data-type>decimal(20,2)</data-type>
+      </column>
+      <column id="239" parent="18" name="productTypeID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="240" parent="18" name="productTypeName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="241" parent="18" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="242" parent="18" name="timeInSeconds">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="243" parent="18" name="startDate">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="244" parent="18" name="endDate">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="245" parent="18" name="pauseDate">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="246" parent="18" name="completedDate">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="247" parent="18" name="completedCharacterID">
+        <mandatory>1</mandatory>
+        <data-type>bigint(11)</data-type>
+      </column>
+      <column id="248" parent="18" name="successfulRuns">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="249" parent="18" name="corporationID">
+        <data-type>bigint(11)</data-type>
+      </column>
+      <index id="250" parent="18" name="blueprintTypeID">
+        <columns>blueprintTypeID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="251" parent="18" name="completedDate">
+        <columns>completedDate</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="252" parent="18" name="endDate">
+        <columns>endDate</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="253" parent="18" name="facilityID">
+        <columns>facilityID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="254" parent="18" name="installerID">
+        <columns>installerID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="255" parent="18" name="productTypeID">
+        <columns>productTypeID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="256" parent="18" name="solarSystemID">
+        <columns>solarSystemID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="257" parent="18" name="startDate">
+        <columns>startDate</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="258" parent="18" name="stationID">
+        <columns>stationID</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="259" parent="18" name="PRIMARY">
+        <columns>jobID</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
